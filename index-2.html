@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            width: 100%;
+            background-color: rgb(173, 202, 223);
+            background-position: center;
+            background-size: cover;
+            height: 109vh;
+        }
+
+        .navbar {
+            width: 1200px;
+            height: 75px;
+            margin: auto;
+        }
+
+        .icon {
+            width: 200px;
+            float: left;
+            height: 70px;
+        }
+
+        .logo {
+            color: black;
+            font-size: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0px;
+            float: left;
+            padding-top: 10px;
+        }
+
+        .menu {
+            width: 400px;
+            float: left;
+            height: 70px;
+        }
+
+        ul {
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ul li {
+            list-style: none;
+            margin-top: 27px;
+            margin-left: 62px;
+            font-size: 14px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #010a15;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+        }
+
+        ul li a:hover {
+            color: aliceblue;
+        }
+
+        .search {
+            width: 330px;
+            float: left;
+            margin-left: 270px;
+        }
+
+        .srch {
+            font-size: 'Times New Roman';
+            width: 200px;
+            height: 40px;
+            background: transparent;
+            border: 1px solid black;
+            color: #010a15;
+            margin-top: 13px;
+            border-right: none;
+            font-size: 16px;
+            float: left;
+            padding: 10px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+
+        .btn {
+            width: 100px;
+            height: 40px;
+            border: 2px solid black;
+            margin-top: 13px;
+            font-size: 15px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .srch:focus {
+            outline: none;
+        }
+
+        .content {
+            width: 1200px;
+            height: auto;
+            margin: auto;
+            color: rgb(29, 29, 117);
+        }
+
+        .content .par {
+            padding-left: 20px;
+            padding-bottom: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1.2px;
+            line-height: 30px;
+        }
+
+        .content h1 {
+            font-family: 'Times New Roman';
+            font-size: 50px;
+            padding-left: 20px;
+            margin-top: 9%;
+            letter-spacing: 2px;
+        }
+
+        .content img {
+            float: right;
+        }
+
+        .content .cn {
+            width: 160px;
+            height: 40px;
+            border: none;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .4s ease;
+        }
+
+        .content.p img {
+            padding-left: 20px;
+            padding-top: 0px;
+        }
+
+        .content .cn a {
+            text-decoration: none;
+            color: #010a15;
+            transition: .3s ease;
+        }
+
+        .cn:hover {
+            background-color: aliceblue;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .search {
+                justify-content: flex-start;
+                margin-top: 10px;
+                margin-left: 0;
+            }
+
+            .menu {
+                margin-top: 10px;
+            }
+
+            .menu ul {
+                flex-direction: column;
+            }
+
+            .menu ul li {
+                margin-left: 0;
+                margin-bottom: 5px;
+            }
+
+            .content {
+                padding: 10px;
+            }
+        }
+
+        /* .icon a {
+            height: 5rem;
+            width: 6rem;
+            border: 1px solid #a19f9d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            border-radius: 2px;
+        }
+
+        .icon {
+            margin-left: 16px;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">TODO</h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Teams</a></li>
+                    <li><a href="#">Copilot</a></li>
+                    <li><a href="#">Windows</a></li>
+                    <li><a href="#">Deals</a></li>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type to text">
+                <a href="#"><button class="btn">Search</button></a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>TODO APP</h1>
+            <p class="par">You are using the todo app <br>
+                add the data store data in local storage.<br>
+                if your work is compelete so you delete the data nd update your data.
+                <!-- <img src="https://res.cdn.office.net/todo/1602936_2.115.2/icons/welcome-center.png"> -->
+            </p>
+            <button class="cn"><a href="index-3.html">Get Started</a></button>
+        </div>
+
+        <!-- <div class="icon">
+            <a href="#"><i class="fa fa-android"></i></a>
+            <a href="#"><i class="fa fa-windows"></i></a>
+            <a href="#"><i class="fa fa-apple"></i></a>
+        </div> -->
+    </div>
+</body>
+
+</html>
